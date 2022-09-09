@@ -1,4 +1,4 @@
-<h1 align="center">Weather Dashboard</h1>
+<h1 align="center">Internship Training</h1>
 
 <div align="center">
 
