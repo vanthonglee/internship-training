@@ -1,0 +1,183 @@
+
+
+*{
+  margin : 0 ;
+  padding : 0 ;
+  box-sizing : border-box ;
+}
+.mr-b {
+ margin-bottom : 50px ;
+}
+
+
+.img {
+  width : 180px ;
+  height : 180px ;
+  border-radius : 50% ;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: card; }
+.item4 { grid-area: main1; }
+
+
+.grid-container {
+  display : grid ;
+  grid-template-areas :
+   'header header header header header header'                                        
+   'main1 main1 main card card card'                                
+   'main1 main1 main card card card'
+   ;
+  gap : 10px;
+  
+
+}
+
+.grid-container1 {
+  display : grid ;
+  grid-template-columns: 300px 300px ;
+  gap: 10px ;
+  padding : 10px ;
+}
+
+.grid-container1 > div p {
+  
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.grid-container1 > div > i:last-child{
+  margin-left: 10px;
+}
+
+
+
+.grid-container > div {
+  color: black ;
+  padding: 20px 0 ;
+  font-size: 22px;
+}
+
+.flex-container {
+    display : flex ;
+    align-items : center ;
+    background-color : rgb( 131 , 131 , 211 ) ;
+  
+}
+
+.flex-container > div {
+  color : white ;
+  margin : 10px ;
+  text-align : center ;
+  font-size : 30px ;
+}
+
+.flex1 {
+  flex-grow: 1 ;
+
+}
+.flex8 {
+  flex-grow: 8 ;
+}
+
+.input {
+  width : 50% ;
+  padding : 12px 20px ;
+  margin : 10px 0 ;
+  box-sizing : border-box ;
+  border : 0px solid rgb(59,59,221 ) ;                                 
+  border-radius : 10px 0 0 10px;                      
+}  
+
+.input:focus {
+  border : 1px solid rgb(131 ,131 , 211 );
+}
+
+.while{
+  color:white;
+}
+
+.btn {
+  color : white ;
+  padding : 12px 12px ;
+  border-radius : 0 10px 10px 0 ;                             
+  border : 0px solid rgb(131 ,131 , 211 ) ;                               
+  background-color :  rgb( 60 , 112 , 224 ) ; 
+  cursor : pointer ;
+}
+  
+
+a {
+  text-decoration : none ;
+  color: rgb( 81 , 123 , 212 );
+}
+          
+.card {
+  padding : 25px 20px ;
+  background-color : aliceblue ;
+  border: 1px solid rgb( 218 , 217 , 221 ) ;
+  border-radius: 5px ;   
+}
+                                                                            I
+
+
+
+/* Css mode Dark Light */
+/* [type="checkbox"],
+input:focus,
+:root #check input:required {
+  
+} */
+ [type="checkbox"],.checkbox1{
+  opacity: 0;
+  position: absolute;
+  
+}
+  
+label {
+   background-color: black ;
+    border-radius: 100px ;
+   display: flex ;
+   height: 29px ;
+   width: 55px ;
+   position: relative ;
+   justify-content : space-between ;
+   transform: scale(1.3) ;
+}
+
+.moon{
+  color : rgb( 224 , 213 , 49 ) ;
+  position : absolute ;
+  left : 7px ;
+  top : 4px ;
+  font-size: 20px;
+}
+.sun {  
+  color : rgb( 224 , 213 , 49 ) ;
+ position : absolute ;
+  right : 5px ;
+  top : 4px ;
+  font-size: 20px;
+}
+
+.ball {
+  background-color : white ;
+  height : 25px ;
+  width : 25px ;
+  border-radius : 50% ;
+  position: absolute ;
+  left: 2px ;
+  top: 2px ;
+  z-index : 2 ;
+  transform: translateX(0px) ;
+  transition: 0.2s linear ;
+
+}
+
+.checkbox1:checked + label .ball {
+  transform : translateX(26px) ;
+}           
+
+
+
