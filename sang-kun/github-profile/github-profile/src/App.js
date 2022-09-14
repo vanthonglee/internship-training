@@ -1,36 +1,12 @@
 import logo from "./img/logo.png";
 import "./App.css";
+import DarkModeToggle from "./components/DarkMode";
+import Header from "./components/HeaderComponent";
 
 function App() {
   return (
     <div className='grid-container'>
-      <div className='flex-container item1 mr-b'>
-        <div className='flex1'>
-          <p className='while'>Github Profile</p>
-        </div>
-
-        <div className='flex8'>
-          <form action=''>
-            <input
-              type='text'
-              className='input'
-              placeholder='Input name github'
-            />
-            <button className='btn' type='sumbit'>
-              Search
-            </button>
-          </form>
-        </div>
-
-        <div className='flex1'>
-          <input type='checkbox' id='check' className='checkbox1' />
-          <label htmlFor='check'>
-            <i className='fa-solid fa-moon moon'></i>
-            <i className='fa-solid fa-sun sun'></i>
-            <div className='ball'></div>
-          </label>
-        </div>
-      </div>
+      <Header />
 
       <div className='item2 '>
         <img className='img' src={logo} alt='anh' />
@@ -51,7 +27,7 @@ function App() {
 
         <div className='card'>
           <p>
-            <a href=''> Repositories 2 </a>
+            <a href=''>Repositories 2 </a>
           </p>
           <i className='fa-regular fa-star '></i>345
           <i className='fa-solid fa-code-fork '></i>345
