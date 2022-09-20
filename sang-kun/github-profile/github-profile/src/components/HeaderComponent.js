@@ -4,24 +4,17 @@ import "../App.css";
 
 const Header = () => {
   return (
-    <div className='flex-container item1 mr-b header1'>
-      <div className='flex1'>
-        <p className='while'>Github Profile</p>
+    <div className='box box--12 grid__inner header--bg'>
+      <div className='box box--3'>
+        <p className='logo text--white'>Github Profile</p>
       </div>
 
-      <div className='flex8'>
-        <form action=''>
-          <input
-            type='text'
-            className='input'
-            placeholder='Input name github'
-          />
-          <button className='btn' type='sumbit'>
-            Search
-          </button>
-        </form>
+      <div className='box box--6 '>
+        <input type='text' className='input' placeholder='Input name github' />
+        <button className='btn' type='sumbit'>
+          Search
+        </button>
       </div>
-
       <DarkModeToggle />
     </div>
   );

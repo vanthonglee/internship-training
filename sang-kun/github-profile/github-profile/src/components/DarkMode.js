@@ -1,18 +1,41 @@
-import React from "react";
-import useDarkMode from "use-dark-mode";
+import React, { useEffect, useState } from "react";
+
 import "../App.css";
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(false);
+  const [checked, setChecked] = useState(
+    localStorage.getItem("theme") === "dark" ? true : false
+  );
+  useEffect(() => {
+    document
+      .getElementsByTagName("HTML")[0]
+      .setAttribute("data-theme", localStorage.getItem("theme"));
+  }, []);
+
+  const toggleThemeChange = () => {
+    if (checked === false) {
+      localStorage.setItem("theme", "dark");
+      document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", localStorage.getItem("theme"));
+      setChecked(true);
+    } else {
+      localStorage.setItem("theme", "light");
+      document
+        .getElementsByTagName("HTML")[0]
+        .setAttribute("data-theme", localStorage.getItem("theme"));
+      setChecked(false);
+    }
+  };
 
   return (
-    <div className='flex1'>
+    <div className='box box--3'>
       <input
         type='checkbox'
         id='check'
         className='checkbox1'
-        checked={darkMode.value}
-        onChange={darkMode.toggle}
+        checked={checked}
+        onChange={() => toggleThemeChange()}
       />
       <label htmlFor='check'>
         <i className='fa-solid fa-sun sun'></i>

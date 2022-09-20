@@ -1,189 +1,88 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body.light-mode {
-  background-color: #fff;
-  color: #333;
-  transition: background-color 0.3s ease;
-}
-
-body.dark-mode {
-  background-color: #596a79;
-  color: #dfdfdf;
-  
-  
-}
-
-body.dark-mode .header1{
-    background-color: #cac6c6;
-}
-
-body.dark-mode  .while{ 
-    color: rgb(10, 10, 10);
-    
-}
-
-body.dark-mode .item2{
-    color: white;
-}
-
-body.dark-mode .card{
-    background-color: #cac6c6;
-    color: #333;
-}
-
-body.dark-mode .card > p > a{
-    
-    color: rgb(31, 30, 30);
-}
-
-body.dark-mode .btn{
-    background-color: #596a79;
-    
-}
-
 *{
   margin : 0 ;
   padding : 0 ;
   box-sizing : border-box ;
 }
-.mr-b {
- margin-bottom : 50px ;
+
+/* CSS Grid */
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.grid__inner{
+  	display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
-.img {
-  width : 180px ;
-  height : 180px ;
-  border-radius : 50% ;
-}
-
-.item1 { grid-area: header; }
-.item2 { grid-area: main; }
-.item3 { grid-area: card; }
-.item4 { grid-area: main1; }
-
-
-.grid-container {
-  display : grid ;
-  grid-template-areas :
-   'header header header header header header'                                        
-   'main1 main1 main card card card'                                
-   'main1 main1 main card card card'
-   ;
-  gap : 10px;
-  
-
-}
-
-.grid-container1 {
-  display : grid ;
-  grid-template-columns: 300px 300px ;
-  gap: 10px ;
-  padding : 10px ;
-}
-
-.grid-container1 > div p {
-
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-.grid-container1 > div p a{
-
- color: white;
-}
-
-.grid-container1 > div > i:last-child{
-  margin-left: 10px;
-}
-
-
-
-.grid-container > div {
-  color: black ;
-  padding: 20px 0 ;
-  font-size: 22px;
-}
-
-.flex-container {
-    display : flex ;
-    align-items : center ;
-    background-color : rgb( 131 , 131 , 211 ) ;
+.box {
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
   
 }
 
-.flex-container > div {
-  color : white ;
-  margin : 10px ;
-  text-align : center ;
-  font-size : 30px ;
+.box--2 {
+  grid-column: span 2;
 }
 
-.flex1 {
-  flex-grow: 1 ;
-
-}
-.flex8 {
-  flex-grow: 8 ;
+.box--3 {
+  grid-column: span 3;
 }
 
-.input {
-  width : 50% ;
-  padding : 12px 20px ;
-  margin : 10px 0 ;
-  box-sizing : border-box ;
-  border : 0px solid rgb(59,59,221 ) ;                                 
-  border-radius : 10px 0 0 10px;                      
-}  
-
-.input:focus {
-  border : 1px solid rgb(131 ,131 , 211 );
+.box--4 {
+  grid-column: span 4;
 }
 
-.while{
-  color:white;
+.box--6 {
+  grid-column: span 6;
 }
 
-.btn {
-  color : white ;
-  padding : 12px 12px ;
-  border-radius : 0 10px 10px 0 ;                             
-  border : 0px solid rgb(131 ,131 , 211 ) ;                               
-  background-color :  rgb( 60 , 112 , 224 ) ; 
-  cursor : pointer ;
+.box--8 {
+  grid-column: span 8;
+}
+
+.box--12 {
+  grid-column: span 12;
+}
+ 
+ /* Background-color  */
+
+.header--bg{
+    background-color: var(--header--background-color);
+}
+.card--bg{
+    background-color: var(--card--background-color);
 }
   
-
-a {
-  text-decoration : none ;
-  color: rgb( 81 , 123 , 212 );
+/* Light-theme */
+html[data-theme="light"] { 
+  --color: rgb(0, 0, 0);
+  --background-color: rgb(255, 255, 255);
+  --header--background-color: rgb(127, 113, 204);
+  --card--background-color:rgb(127, 113, 204);
+  --logo-color: rgb(255, 255, 254);
+  --btn-color: rgb(59,59,221 ) ;
+  --icon-color:rgb(0, 0, 0);
 }
-          
-.card {
-  padding : 25px 20px ;
-  background-color : rgb( 131 , 131 , 211 );
-  border: 1px solid rgb( 218 , 217 , 221 ) ;
-  border-radius: 5px ;  
-  color: #faf6f6; 
+
+/* Dark-theme */
+html[data-theme="dark"] { 
+  --color: rgb(250, 250, 250); 
+  --background-color: rgb(44, 39, 39);
+  --header--background-color: rgb(124, 115, 115);
+  --card--background-color:rgb(124, 115, 115);
+  --logo-color: rgb(8, 8, 8);
+  --btn-color: rgb(44, 39, 39);
+  --icon-color:rgb(250, 250, 250); 
 }
-                                                                            I
 
-
-
-/* Css mode Dark Light */
-/* [type="checkbox"],
-input:focus,
-:root #check input:required {
-  
-} */
-
-
+/* DarkMode */
 [type='checkbox'], .checkbox1{
   opacity: 0;
   position: absolute;
@@ -192,13 +91,16 @@ input:focus,
   
 label {
    background-color: black ;
-    border-radius: 100px ;
+   border-radius: 100px ;
    display: flex ;
    height: 29px ;
    width: 55px ;
    position: relative ;
-   justify-content : space-between ;
+   left: 200px;
+   top: 12px;
+   justify-content : space-between;
    transform: scale(1.3) ;
+  
 }
 
 .moon{
@@ -232,6 +134,91 @@ label {
 
 .checkbox1:checked + label .ball {
   transform : translateX(26px) ;
-}           
+}     
+
+
+
+/* Container */
+
+
+
+
+.mr-top{
+    margin-top:20px;
+}
+
+.mr-bottom{
+    margin-bottom: 10px;
+}
+
+.mr-left{
+    margin-left: 10px;
+}
+
+.img {
+  width : 180px ;
+  height : 180px ;
+  border-radius : 50% ;
+}
+
+ .input {
+  width : 50% ;
+  padding : 12px 20px ;
+  margin : 10px 0 ;
+  box-sizing : border-box ;
+  border : 0px solid rgb(59,59,221 ) ;                                 
+  border-radius : 10px 0 0 10px;                      
+}  
+
+.input:focus {
+  border : 1px solid rgb(131 ,131 , 211 );
+}
+
+
+
+.btn {
+  color : white ;
+  padding : 12px 12px ;
+  border-radius : 0 10px 10px 0 ;                             
+  border : 0px solid rgb(131 ,131 , 211 ) ;                               
+  background-color :  var(--btn-color) ; 
+  cursor : pointer ;
+}
+  
+
+a {
+  text-decoration : none ;
+  color: rgb( 81 , 123 , 212 );
+}
+          
+.card {
+  padding : 25px 20px ;
+  background-color : var(--card--background-color);
+  border: 1px solid rgb( 218 , 217 , 221 ) ;
+  border-radius: 5px ;  
+  color: #faf6f6; 
+}
+
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: var(--background-color) 0.3s ease;
+}
+
+.text--white{
+    color: #fff;
+}
+
+.text--profile{
+    color: var(--color);
+}
+
+.logo{
+    position: relative;
+    top: 7px;
+    font-size: 30px;
+}
 
 
