@@ -155,6 +155,9 @@ label {
 .mr-left{
     margin-left: 10px;
 }
+.mr-right{
+    margin-right: 2px;
+}
 
 .img {
   width : 180px ;
@@ -212,6 +215,7 @@ body {
   font-size: 30px;
 }
 
+
 .text--white{
     color: #fff;
 }
@@ -226,4 +230,11 @@ body {
     font-size: 30px;
 }
 
+.name-repo{
+  font-size: 25px;
+ transition: .3s;
+}
 
+.name-repo:hover{
+  transform: scale(1.2);
+}

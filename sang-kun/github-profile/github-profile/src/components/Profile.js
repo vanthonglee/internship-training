@@ -18,7 +18,7 @@ const Profile = (props) => {
             <p> {repos?.length} Repo</p>
           </div>
         </div>
-        <div className='box box--8 grid__inner'>
+        <div className='box box--6 grid__inner'>
           {repos
             .sort((a, b) => {
               return (
