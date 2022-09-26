@@ -1,5 +1,7 @@
 import Repo from "./Repo";
 import "../App.css";
+import AvatarDemo from "./UI/Avatar";
+
 const Profile = (props) => {
   const { userInfo, repos } = props;
   // console.log(repos[0].name);
@@ -10,7 +12,7 @@ const Profile = (props) => {
       <div className='box box--12 grid__inner mr-top'>
         <div className=' box box--4'>
           <div className='gird1__item text--profile'>
-            <img className='img' src={userInfo?.avatar_url} alt='anh' />
+            <AvatarDemo src={userInfo?.avatar_url} alt={userInfo?.name} />
             <p className='font--size'> {userInfo?.name} </p>
             <p> {userInfo?.login} </p>
             <p> {userInfo?.followers} Followers</p>

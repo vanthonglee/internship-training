@@ -1,5 +1,11 @@
 import React from "react";
 import "../App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCodeFork, faStar } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faCodeFork, faStar);
+
 const Repo = ({ repo }) => {
   const { name, html_url, forks, stargazers_count } = repo;
   //   console.log(repos1);
@@ -10,9 +16,9 @@ const Repo = ({ repo }) => {
           {name}
         </a>
       </p>
-      <i className='fa-regular fa-star mr-right'></i>
+      <FontAwesomeIcon icon={faStar} className='mr-right' />
       {stargazers_count}
-      <i className='fa-solid fa-code-fork mr-left mr-right'></i>
+      <FontAwesomeIcon icon={faCodeFork} className='mr-right mr-left' />
       {forks}
     </div>
   );
