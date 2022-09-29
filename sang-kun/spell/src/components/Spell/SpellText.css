@@ -1,0 +1,47 @@
+.spell__text{
+    background-color: rgb(192, 192, 163);
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+.spell__text--box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+  
+}
+
+.spell__text--box > span{
+    text-align: center;
+    width: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: auto 0.3rem;
+    color: rgb(81, 226, 81);
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+.spell__text--input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem auto;
+    margin-top: 4rem;
+}
+
+.spell__text--input > input{
+    display: flex;
+    margin: auto 0.3rem;
+    padding: 0.4rem 0.6rem;
+   font-size: 1.2rem;
+   border: none;
+   border-radius: 5px;
+    
+}
+/* .spell__text--input > input:focus-visible{
+     border: 1px solid rgb(235, 116, 36);
+} */
