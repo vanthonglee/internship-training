@@ -1,0 +1,240 @@
+*{
+  margin : 0 ;
+  padding : 0 ;
+  box-sizing : border-box ;
+}
+
+/* CSS Grid */
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.grid__inner{
+  	display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+.box {
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+ 
+}
+
+.box--2 {
+  grid-column: span 2;
+}
+
+.box--3 {
+  grid-column: span 3;
+}
+
+.box--4 {
+  grid-column: span 4;
+}
+
+.box--6 {
+  grid-column: span 6;
+}
+
+.box--8 {
+  grid-column: span 8;
+}
+
+.box--12 {
+  grid-column: span 12;
+}
+ 
+ /* Background-color  */
+
+.header--bg{
+    background-color: var(--header--background-color);
+}
+.card--bg{
+    background-color: var(--card--background-color);
+}
+  
+/* Light-theme */
+html[data-theme="light"] { 
+  --color: rgb(0, 0, 0);
+  --background-color: rgb(255, 255, 255);
+  --header--background-color: rgb(127, 113, 204);
+  --card--background-color:rgb(127, 113, 204);
+  --logo-color: rgb(255, 255, 254);
+  --btn-color: rgb(59,59,221 ) ;
+  --icon-color:rgb(0, 0, 0);
+}
+
+/* Dark-theme */
+html[data-theme="dark"] { 
+  --color: rgb(250, 250, 250); 
+  --background-color: rgb(44, 39, 39);
+  --header--background-color: rgb(124, 115, 115);
+  --card--background-color:rgb(124, 115, 115);
+  --logo-color: rgb(8, 8, 8);
+  --btn-color: rgb(44, 39, 39);
+  --icon-color:rgb(250, 250, 250); 
+}
+
+/* DarkMode */
+[type='checkbox'], .checkbox1{
+  opacity: 0;
+  position: absolute;
+  
+}
+  
+label {
+   background-color: black ;
+   border-radius: 100px ;
+   display: flex ;
+   height: 29px ;
+   width: 55px ;
+   position: relative ;
+   float: right;
+   right: 50px;
+   top: 12px;
+   justify-content : space-between;
+   transform: scale(1.3) ;
+  
+}
+
+.moon{
+  color : rgb( 224 , 213 , 49 ) ;
+  position : absolute ;
+  left : 7px ;
+  top : 4px ;
+  font-size: 20px;
+}
+.sun {  
+  color : rgb( 224 , 213 , 49 ) ;
+ position : absolute ;
+  right : 5px ;
+  top : 4px ;
+  font-size: 20px;
+}
+
+.ball {
+  background-color : white ;
+  height : 25px ;
+  width : 25px ;
+  border-radius : 50% ;
+  position: absolute ;
+  left: 2px ;
+  top: 2px ;
+  z-index : 2 ;
+  transform: translateX(0px) ;
+  transition: 0.2s linear ;
+
+}
+
+.checkbox1:checked + label .ball {
+  transform : translateX(26px) ;
+}     
+
+
+
+/* Container */
+
+
+
+
+.mr-top{
+    margin-top:20px;
+}
+
+.mr-bottom{
+    margin-bottom: 10px;
+}
+
+.mr-left{
+    margin-left: 10px;
+}
+.mr-right{
+    margin-right: 2px;
+}
+
+.img {
+  width : 180px ;
+  height : 180px ;
+  border-radius : 50% ;
+}
+
+ .input {
+  width : 50% ;
+  padding : 12px 20px ;
+  margin : 10px 0 ;
+  box-sizing : border-box ;
+  border : 0px solid rgb(59,59,221 ) ;                                 
+  border-radius : 10px 0 0 10px;                      
+}  
+
+.input:focus {
+  border : 1px solid rgb(131 ,131 , 211 );
+}
+
+
+
+.btn {
+  color : white ;
+  padding : 12px 12px ;
+  border-radius : 0 10px 10px 0 ;                             
+  border : 0px solid rgb(131 ,131 , 211 ) ;                               
+  background-color :  var(--btn-color) ; 
+  cursor : pointer ;
+}
+  
+
+a {
+  text-decoration : none ;
+  color: rgb( 81 , 123 , 212 );
+}
+          
+.card {
+  padding : 25px 20px ;
+  background-color : var(--card--background-color);
+  border: 1px solid rgb( 218 , 217 , 221 ) ;
+  border-radius: 5px ;  
+  color: #faf6f6; 
+}
+
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: var(--background-color) 0.3s ease;
+}
+
+.font--size{
+  font-size: 30px;
+}
+
+
+.text--white{
+    color: #fff;
+}
+
+.text--profile{
+    color: var(--color);
+}
+
+.logo{
+    position: relative;
+    top: 7px;
+    font-size: 30px;
+}
+
+.name-repo{
+  font-size: 25px;
+ transition: .3s;
+}
+
+.name-repo:hover{
+  transform: scale(1.2);
+}
