@@ -1,0 +1,11 @@
+.spell__result{
+   
+    padding: .4rem 1rem;
+    margin-top: 1rem;
+    justify-items: center;
+    background-color: rgb(192, 192, 163);
+}
+
+.spell__result--content{
+ color: rgb(31, 28, 28);
+}

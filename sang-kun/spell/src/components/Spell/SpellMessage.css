@@ -1,0 +1,12 @@
+.spell__message{
+    display:flex;
+    justify-content: center;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    
+}
+
+.spell__message--content{
+    font-size: 1.5rem;
+    color: rgb(221, 61, 61);
+}

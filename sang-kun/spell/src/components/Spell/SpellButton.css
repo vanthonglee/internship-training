@@ -1,0 +1,41 @@
+.spell__button{
+ display: flex;
+ align-items: center;
+ justify-items: center;
+ background-color: rgb(192, 192, 163);
+ margin-top: 1rem;
+ padding: 1rem 1rem;
+}
+
+.spell__button--item{
+    display: flex;
+    margin: .5rem auto;
+}
+
+.btn{
+    display: flex;
+    padding: .15rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    margin: auto .7rem;
+    border: 3px solid rgb(235, 116, 36);
+}
+
+.btn:hover{
+     background-color: rgb(235, 116, 36);
+     color: white;
+     cursor:pointer;
+     border: 3px solid rgb(255, 255, 255);
+}
+
+.spell__buttton--hint{
+
+}
+
+.spell__button--play{
+    padding: 1rem 2rem;
+}
+
+.spell__button--enter{
+
+}

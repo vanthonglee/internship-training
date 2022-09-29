@@ -1,0 +1,8 @@
+.spell{
+    background-color: rgb(31, 31, 31);
+    padding: 1rem;
+    margin: 3rem auto;
+    width: 40rem;
+    max-width: 95%;
+    color: white;
+}
