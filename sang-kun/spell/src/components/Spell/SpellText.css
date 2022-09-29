@@ -15,16 +15,33 @@
   
 }
 
-.spell__text--box > span{
+.spell__text--box > span[status='inputed']{
     text-align: center;
-    width: 1.8rem;
+    width: 2.2rem;
+    height: 2.2rem;
     font-size: 1.5rem;
     font-weight: 600;
-    margin: auto 0.3rem;
-    color: rgb(81, 226, 81);
-    background-color: rgb(255, 255, 255);
+    margin: auto 0.15rem;
+    padding: auto 1rem;
+    color: white;
+     background-color: rgb(235, 116, 36);
     border-radius: 3px;
 }
+
+.spell__text--box > span[status='input']{
+    text-align: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: auto 0.15rem;
+    padding: auto 1rem;
+    color: white;
+    background-color: rgb(139, 133, 129);
+    border-radius: 3px;
+}
+
+
 .spell__text--input{
     display: flex;
     align-items: center;

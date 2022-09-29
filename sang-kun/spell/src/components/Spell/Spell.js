@@ -3,15 +3,14 @@ import Card from "../UI/Card";
 import "./Spell.css";
 import SpellText from "./SpellText";
 import SpellButton from "./SpellButton";
-import SpellMessage from "./SpellMessage";
 import SpellResult from "./SpellResult";
 
 const Spell = () => {
+  const text = "hello".toUpperCase();
   return (
     <Card className='spell'>
-      <SpellText />
-      <SpellMessage />
-      <SpellButton />
+      <SpellText text={text} />
+      <SpellButton text={text} />
       <SpellResult />
     </Card>
   );

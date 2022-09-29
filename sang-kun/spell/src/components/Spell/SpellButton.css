@@ -14,9 +14,9 @@
 
 .btn{
     display: flex;
-    padding: .5rem 1rem;
+    padding: .15rem 1rem;
     font-size: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 5rem;
     margin: auto .7rem;
     border: 3px solid rgb(235, 116, 36);
 }
@@ -33,7 +33,7 @@
 }
 
 .spell__button--play{
-
+    padding: 1rem 2rem;
 }
 
 .spell__button--enter{
